@@ -1,0 +1,30 @@
+Nicole VanMeter
+
+1. This creates a child. The parent computes its value to be 150 and prints "who are You?" 150. The child computes its value to be 50 tyhen prints its respective print statement.
+
+2.int main(int argc, char **argv){
+	pid_t p = fork();
+	while(fork()){
+	}
+}
+
+3. int main(int argc, char **argv)
+{
+        
+    char *cmd[] = { "/bin/ps", "-ef", ".", NULL };
+    pid_t p = fork();
+
+    if (p != 0){
+	int* rv;
+	waitpid(p, rv ,0);
+	printf("Child process finished");
+	}
+
+    if (execv(cmd[0], cmd) < 0) {
+        fprintf(stderr, "execv failed: %s\n", strerror(errno));
+    }
+
+    return 0;
+}
+
+4.
